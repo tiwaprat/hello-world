@@ -6,7 +6,7 @@
     <br>
      
     <label for="Name"><b>Enter Name</b></label>
-    <input type="text" placeholder="Enter your Name" name="Name" id="Name" required>
+    <input type="text" placeholder="Enter Your Good Name Please" name="Name" id="Name" required>
     <br>
     
     
