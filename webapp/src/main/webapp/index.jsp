@@ -1,40 +1,36 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1>New user Register for DevOps Learning</h1>
-    <p>Please enter your name.</p>
-    <hr>
-    <br>
-     
-    <label for="Name"><b>Enter Name</b></label>
-    <input type="text" placeholder="Enter Your Good Name Please" name="Name" id="Name" required>
-    <br>
-    
-    
-    <label for="mobile"><b>Enter mobile</b></label>
-    <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
-    <br>
-    <br>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple JSP Form</title>
+</head>
+<body>
 
-    <label for="email"><b>Enter Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <br>
+    <h2>Simple JSP Form</h2>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <br>
+    <%-- JSP code to process the form submission --%>
+    <%
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
-    <br>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
+        if (firstName != null && lastName != null) {
+            out.println("<p>First Name: " + firstName + "</p>");
+            out.println("<p>Last Name: " + lastName + "</p>");
+        }
+    %>
 
-   <h1> Thankyou, Happy Learning </h1>
+    <%-- HTML form using JSP syntax --%>
+    <form method="post" action="">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" required><br>
 
-  
-</form>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
