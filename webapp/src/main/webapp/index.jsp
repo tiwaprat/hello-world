@@ -28,6 +28,9 @@
         <label for="lastName">Last Name:</label>
         <input type="text" name="lastName" required><br>
 
+	<label for="age">Age:</label>
+        <input type="text" name="age" required><br>
+
         <input type="submit" value="Submit">
     </form>
 
