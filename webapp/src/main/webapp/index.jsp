@@ -31,7 +31,7 @@
 	<label for="age">Age:</label>
         <input type="text" name="age" required><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Send">
     </form>
 
 </body>
